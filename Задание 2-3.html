@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+	let items = [["shoes", 30, "Euro"], ["jacket", 70, "Euro"], ["t-shirt", 10, "Euro"], ["polo", 20, "Euro"]];
+
+	function countBasketPrice (items) {
+		var sum = 0;
+		var output;
+		for (i = 0; i < items.length; i++) {
+			sum = sum + items[i][1];
+			output = "You bought " + items[i][0] + " price: " + items[i][1] + " " + items[i][2];
+			console.log(output);
+		}
+		return sum;
+	}
+	console.log("Your total price: " + countBasketPrice (items) + " Euro");
+</script>
+</body>   
+</html>

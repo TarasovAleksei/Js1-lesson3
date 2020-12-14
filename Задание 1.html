@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+	//в первых версиях ответа на данное задание у меня был километровый код. В итоге сократился до 2 функций.
+	
+	
+	// создаем функцию, которая будет создавать массив данных от 0 до 100, а в нее уже засунем проверку на простое число.
+	function createArray(a) {
+		const arr = [];
+		let i = 2; //начинаю с 2, так как если начинать с 0, то 0 и 1 тоже подойдут под параметры простого числа, но таковыми почему-то не являются исходя из данных википедии)
+		while (i <= a) {
+		if (checkNumber(i)) { 
+		arr.push(i);
+		}
+		i++;
+		}
+		return arr;
+	};
+
+	function checkNumber(a) {
+		// создаем функцию, которая будет проверять простое ли число
+		for (let i = 2; i < a; i++) {
+			if (a % i === 0) return false;
+		}
+		return true;
+	};
+	
+	console.log(createArray(100));
+</script>
+</body>   
+</html>
